@@ -3,11 +3,13 @@
     <li>
       <%= f.label :title %>
       <%= f.text_field :title %>
+      <%= error_for(:title, @post) %>
     </li>
     
     <li>
       <%= f.label :content %>
       <%= f.text_area :content %>
+      <%= error_for(:content, @post) %>
     </li>
     <li>
       <%= f.submit %>
