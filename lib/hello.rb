@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class Hello < Sinatra::Base
   include ActionController::UrlWriter
-  include ActionView::Helpers::UrlHelper
+  include Rails.application.routes.url_helpers
   include SinatraRails
   
   set :views => Rails.root.join('app', 'views')
