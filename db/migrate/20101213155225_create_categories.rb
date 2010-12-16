@@ -15,7 +15,7 @@ class CreateCategories < ActiveRecord::Migration
   def self.down
     drop_table :categories
     
-    update_table(:posts) do |t|
+    change_table(:posts) do |t|
       t.remove :category_id
     end
   end

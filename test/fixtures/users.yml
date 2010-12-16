@@ -1,2 +1,3 @@
 default:
   email: default@example.com
+  locale: fr

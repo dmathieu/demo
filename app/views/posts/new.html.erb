@@ -10,6 +10,7 @@
       <%= f.label :content %>
       <%= f.text_area :content %>
       <%= error_for(:content, @post) %>
+      <%= I18n.t 'posts.disclaimer', :email => current_user.email %>
     </li>
     <li>
       <%= f.submit %>
