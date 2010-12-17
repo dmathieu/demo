@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
   before_filter :get_post, :only => [:show, :edit, :update]
+  authorize_resource
   
   def show
     
@@ -41,6 +41,6 @@ class PostsController < ApplicationController
   
   private
   def get_post
-    @post = Post.find params[:id]
+    @post = Post.where(:slug => params[:id]).first
   end
 end

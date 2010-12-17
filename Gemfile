@@ -10,6 +10,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
 gem 'cancan'
 
+gem 'bson_ext'
+gem 'mongoid', '2.0.0.beta.20'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
