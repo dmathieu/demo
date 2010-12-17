@@ -19,6 +19,12 @@ class PostTest < ActiveSupport::TestCase
     assert Post.new(default_params).save
   end
   
+  test "should send an email when creating a new post" do
+    mails_count = ActionMailer::Base.deliveries.length
+    assert Post.create(default_params)
+    assert ActionMailer::Base.deliveries.length, mails_count + 1
+  end
+  
   
   private
   def default_params

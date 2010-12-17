@@ -3,6 +3,13 @@ class PostsController < ApplicationController
   before_filter :get_post, :only => [:show, :edit, :update]
   
   def show
+    
+    respond_to do |format|
+      format.html
+      format.json do
+        render :json => @post
+      end
+    end
   end
   
   def new
