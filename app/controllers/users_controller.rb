@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  respond_to :html, :json
   before_filter :get_user
 
   def index

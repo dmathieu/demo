@@ -1,2 +1,10 @@
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= f.text_field :username %>
 <%= f.submit %>
